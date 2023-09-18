@@ -1,0 +1,164 @@
+/*--------------------------------burger_menu--------------------*/
+.main__burger {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main__burger-body {
+    border: 1px solid black;
+    border-radius: 10px 0 0 10px;
+    width: 200px;
+    height: 120px;
+    background-color: aliceblue;
+    box-shadow: -1px 1px 10px;
+    opacity: 0%;
+    transition: opacity 0.2s ease;
+}
+
+.open {
+    opacity: 100%;
+}
+
+.main__burger-body > div {
+    margin: 10px;
+}
+
+.name,
+.position {
+    font-weight: 700;
+}
+
+.main__burger-body__logout_button {
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: crimson;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s ease;
+}
+
+a.logout {
+    text-decoration: none;
+    color: black;
+}
+
+.main__burger-body__logout_button:active {
+    background-color: #A11531;
+}
+
+/*--------------------------------------------------------------*/
+/*----------------------group_menu------------------------------*/
+.main__group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.main__group-body {
+    padding: 20px;
+    width: 80vw;
+    min-width: 270px;
+    border-radius: 10px;
+    background-color: #212529;
+    box-shadow: -2px 2px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+
+.main__group-body_role {
+    z-index: 2;
+    width: 200px;
+    min-width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    background-color: #CAD0D6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.main__group-body a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    color: black;
+    margin: 20px;
+}
+
+.main__group-body a:active {
+    text-decoration: none;
+    color: black;
+}
+
+.main__group-body a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.main__group-body_role:hover {
+    box-shadow: 0px 0px 20px aliceblue;
+    background-color: aliceblue;
+}
+
+.main__group-body_task-alert {
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    position: relative;
+    bottom: 110px;
+    left: 100px;
+    background-color: gray;
+    box-shadow: 0px 0px 20px gray;
+    opacity: 0%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.main__group-body_task-alert p {
+    margin: auto;
+    color: white;
+}
+
+
+.visible {
+    opacity: 100%;
+}
+
+.green {
+    background-color: green;
+    box-shadow: 0px 0px 20px green;
+}
+
+.yellow {
+    background-color: yellow;
+    box-shadow: 0px 0px 20px yellow;
+}
+
+.red {
+    background-color: darkred;
+    box-shadow: 0px 0px 20px darkred;
+}
+
+@media (max-width: 399.89px) {
+    .main__group-body_task-alert {
+        opacity: 100%;
+    }
+}
+
+@media (min-width:400px) and (max-width: 1000px) {
+    .main__group-body_task-alert {
+        opacity: 100%;
+    }
+}

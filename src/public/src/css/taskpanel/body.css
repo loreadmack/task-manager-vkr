@@ -1,0 +1,134 @@
+.main__task {
+    display: flex;
+    height: auto;
+    width: 60vw;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-radius: 10px;
+    background-color: #212529;
+}
+
+.main__task__panel {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    height: auto;
+    width: 90%;
+    margin: auto;
+}
+
+.title_priority__block{
+    display:flex;
+}
+
+.task_title{
+    margin: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+div.priority{
+    margin-top: 8px;
+    
+}
+
+div.priority p{
+    font-size: 20px;
+    line-height: 30px;
+    width: auto;
+    padding: 0px 10px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+div.deadline p{
+    font-size: 22px;
+    line-height: 46px;
+    margin-left: 20px;
+}
+
+.task_context {
+    display: flex;
+    margin:0 20px;
+}
+
+.CommentNav {
+    display: flex;
+    flex-direction: row;
+}
+
+.task_context textarea {
+    resize: none;
+    border-radius: 5px;
+    font-size:150%;
+    padding: 10px;
+}
+
+input#Comment {
+    padding: 3px 6px;
+    width: 80%;
+    height: auto;
+    border-radius: 5px;
+}
+
+input#SendComment {
+    padding: 0 20px;
+    border-radius: 5px;
+    background-color: crimson;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+input#SendComment:active {
+    background-color: #A11531;
+}
+
+.buttons {
+    margin: 10px 20px;
+}
+
+input#Complete {
+    padding: 10px 20px;
+    background-color: crimson;
+    border-radius: 5px;
+    border:1px solid black;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+input#Complete:active {
+    background-color: #A11531;
+    
+}
+
+input#Back {
+    padding: 10px 20px;
+    background-color: crimson;
+    border-radius: 5px;
+    border:1px solid black;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+input#Back:active {
+    background-color: #A11531;
+
+}
+
+.High {
+    background-color: darkred;
+}
+
+.Medium {
+    background-color: yellow;
+}
+
+.Low {
+    background-color: green;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>GameOnTM</title>
+    <link rel="shortcut icon" href="../src/img/fav.jpg">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/header.css">
+    <link rel="stylesheet" href="../src/css/teamleadreviewpanel/body.css">
+    <script src="../src/js/dropmenu.js" defer></script>
+    <script src="../src/js/reviewPanel.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper-container">
+        <header class="header-container">
+            <div class="header__logo">
+                <img src="../src/img/logo.png" alt="Логотип">
+            </div>
+            <div class="header__burger-button">
+                <a href="#"><img src="../src/img/downdropico.svg" alt="Бургер"></a>
+            </div>
+        </header>
+        <main class="main-container">
+            <section class="main__burger">
+                <div class="main__burger-body">
+                   <div class="hideID" id="LeadID"><%=id%></div>
+                    <div class="main__burger-body__name"><span class="name">Name: </span> <span class="sname"><%=name%></span></div>
+                    <div class="main__burger-body__position"><span class="position">Position: </span> <span class="sposition"><%=role%></span></div>
+                    <div class="main__burger-body__logout_button"><a href="../logout" class="logout">Logout</a></div>
+                </div>
+            </section>
+            <section class="main__teamlead">
+                <div class="main__teamlead_review_panel">
+                    <input type="button" id="back" value="Back">
+                    <div class="main__teamlead_review_panel__tasks">
+                        <%if (task !== 'Not searched') {%>
+                            <%var CurDate =  new Date(task[0].deadline.toISOString()).toLocaleDateString(); var counter = 0%>
+                            <% for(let i = 0; i < task.length; i++) { %>
+                                <%if (new Date(task[i].deadline.toISOString()).toLocaleDateString() !== CurDate) {CurDate = new Date(task[i].deadline.toISOString()).toLocaleDateString(); counter = 0}%>
+                                <%if (counter === 0) { counter++%>
+                                    <h2 class="date">Deadline:<%=CurDate %> </h2><hr>
+                                <%} else {counter++}%>
+                                <div class="main__teamlead_review_panel__task">
+                                    <div class="task">
+                                        <div class="hideID" id="TaskID"><%=task[i].id%></div>
+                                        <span class="<%if (task[i].priority === 1) {%> <%=high%> <% } else if (task[i].priority === 0.5) {%> <%=medium%> <% } else { %> <%=low%> <% } %>"><p>Task <%=i+1%>:</p></span> <p class="title"><%=task[i].title%></p>
+                                    </div>
+                                    <div class="context hide" id="hide">
+                                        <div class="context_comments">
+                                            <textarea name="" id="context" cols="45" rows="10" readonly><%=task[i].context%></textarea>
+                                            <div class="comment_block">
+                                                    <%let commenttext = ''%>
+                                                    <%if (comments.length === 0) {%>
+                                                        <%commenttext = 'No comments'%>
+                                                    <%}else {%>
+                                                        <%for (let j = 0; j < comments.length; j++) {%>
+                                                            <%if (task[i].id === comments[j].TaskID){%>
+                                                                <%if (id === comments[j].UserID){%>
+                                                                    <%commenttext+='You: ' + comments[j].comment+"\n"%>
+                                                                <%} else { %>
+                                                                    <%commenttext+=comments[j].User + ': ' + comments[j].comment+"\n"%>
+                                                                <%}%>
+                                                            <%}%>
+                                                        <%}%>
+                                                    <%}%>
+                                                <textarea name="" id="comments" cols="25" rows="14" readonly><%=commenttext%></textarea>
+                                                <div class="comment_nav">
+                                                    <input type="text" class="comment">
+                                                    <input type="button" id="SendComment" value="Send">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input type="button" value="Accept" class="ControlButton" id="Accept">
+                                        <input type="button" value="Reject" class="ControlButton" id="Reject">
+                                    </div>
+                                </div>
+                        <% }} else {%> <h2 class="date">Tasks not found</h2><%}%>
+                    </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

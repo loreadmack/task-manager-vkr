@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>GameOnTM</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/header.css">
+    <link rel="stylesheet" href="../src/css/taskpanel/body.css">
+    <script src="../src/js/dropmenu.js" defer></script>
+    <script src="../src/js/CompleteTask.js" defer></script>
+    <script src="../src/js/backButton.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper-container">
+        <header class="header-container">
+            <div class="header__logo">
+                <img src="../src/img/logo.png" alt="Логотип">
+            </div>
+            <div class="header__burger-button">
+                <a href="#"><img src="../src/img/downdropico.svg" alt="Бургер"></a>
+            </div>
+        </header>
+        <main class="main-container">
+            <section class="main__burger">
+                <div class="main__burger-body">
+                    <div class="UserID hidden"><%=UserID%></div>
+                    <div class="main__burger-body__name"><span class="name">Name: </span> <span class="sname"><%=name%></span></div>
+                    <div class="main__burger-body__position"><span class="position">Position: </span> <span class="sposition"><%=role%></span></div>
+                    <div class="main__burger-body__logout_button"><a href="../logout" class="logout">Logout</a></div>
+                </div>
+            </section>
+            <section class="main__task">
+                <div class="main__task__panel">
+                    <div class="title_priority__block">
+                        <div class="TaskID hidden"><%=TaskID%></div>
+                        <div class="task_title">Task: <%=title%></div>
+                        <div class="priority"><p class="<%if (priority === 1) {%> <%=High%> <% } else if (priority === 0.5) {%> <%=Medium%> <% } else { %> <%=Low%> <% } %>">Priority</p></div>
+                        <div class="deadline"><p>Date: <%=new Date(deadline.toISOString()).toLocaleDateString()%></p></div>
+                    </div>
+                    <div class="task_context">
+                        <textarea name="TaskContext" id="TaskContext" cols="87" rows="10" readonly><%=context%></textarea>
+                        <div class="comment">
+                            <%let commenttext = ''%>
+                                <%if (comments.length === 0) {%>
+                                    <%commenttext = 'No comments'%>
+                                <%}else {%>
+                                    <%for (let j = 0; j < comments.length; j++) {%>
+                                        <%if (UserID === comments[j].UserID){%>
+                                        <%commenttext+='You: ' + comments[j].comment+"\n"%>
+                                        <%} else { %>
+                                            <%commenttext+=comments[j].User + ': ' + comments[j].comment+"\n"%>
+                                        <%}%>
+                                    <%}%>
+                                <%}%>
+                            <textarea name="TaskComments" id="TaskComments" cols="30" rows="10" readonly><%=commenttext%></textarea>
+                            <div class="CommentNav">
+                                <input type="text" id="Comment" name="Comment">
+                                <input type="button" id="SendComment" value="Send">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <input type="button" value="Back" id="Back">
+                        <input type="button" value="Complete" id="Complete">
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+/*------------------------------------burger------------------------------------*/
+.main__burger {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main__burger-body {
+    border: 1px solid black;
+    border-radius: 10px 0 0 10px;
+    width: 200px;
+    height: 120px;
+    background-color: aliceblue;
+    box-shadow: -1px 1px 10px;
+    opacity: 0%;
+    transition: opacity 0.2s ease;
+}
+
+.open {
+    opacity: 100%;
+}
+
+.main__burger-body > div {
+    margin: 10px;
+}
+
+.name,
+.position {
+    font-weight: 700;
+}
+
+.main__burger-body__logout_button {
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: crimson;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s ease;
+}
+
+a.logout {
+    text-decoration: none;
+    color: black;
+}
+
+.main__burger-body__logout_button:active {
+    background-color: #A11531;
+}
+/*------------------------------------------------------------------------------*/
+
+.main__adminpanel{
+    width: 100vw;
+    height: 450px;
+}
+
+.main__adminpanel__body{
+    display: flex;
+    width: 20vw;
+    height: 100%;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #212529;
+}
+
+.wrapper__adminpanel {
+    margin: auto auto;
+}
+
+h1.title {
+    color:whitesmoke;
+
+}
+
+.block {
+    display: block;
+}
+
+.wrapper__adminpanel label, input {
+    display: block;
+}
+
+label {
+    color:aliceblue;
+}
+
+.Submit {
+    display: flex;
+    flex-direction: row;
+}
+
+input {
+    margin: 2px 0 15px 0;
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="button"] {
+    padding: 5px 28px;
+    margin-top: 10px;
+    background-color: crimson;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+input[type="button"]:active {
+    background-color: #A11531;
+    
+}
+
+.warning{
+    border:2px solid red;
+}
+
+.wrong {
+    border:2px solid red;
+}
+
+.hide {
+    display: none;
+}
+
+.warning_text {
+    font-size: 12px;
+    line-height: 12px;
+    color:red;
+}

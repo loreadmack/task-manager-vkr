@@ -1,0 +1,25 @@
+.main__admin_panel {
+    display: flex;
+    height: auto;
+    width: 40vw;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #212529;
+}
+
+.main_admin_panel__block {
+    display :flex;
+    width:170px;
+    height: 200px;
+    margin: 20px auto;
+    border-radius: 5px;
+    background-color: floralwhite;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.main_admin_panel__block:hover {
+    box-shadow: 0 0 10px floralwhite;
+}

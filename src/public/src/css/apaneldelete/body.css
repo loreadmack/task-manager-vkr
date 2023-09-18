@@ -1,0 +1,99 @@
+.wrapper__panel_block {
+    display: flex;
+    flex-direction: column;
+    width:40vw;
+    height: auto;
+    background-color: #212529;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.DeletePanel {
+    width: auto;
+    height: auto;
+    margin: 20px auto;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    
+}
+
+.UserParams {
+    display: flex;
+    flex-direction: column;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.Search_block {
+    margin: 5px auto;
+}
+
+.Search_block input#Search {
+    width: 300px;
+    padding: 3px 6px;
+    border-radius: 5px;
+}
+
+.Search_block input#SearchButton {
+    background-color: crimson;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px 6px;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.Search_block input#SearchButton:active {
+    background-color: #A11531;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+table {
+    margin: 5px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+
+td {
+    cursor: pointer;
+}
+
+.NavPanel {
+    display: flex;
+}
+
+input#Back, input#Delete {
+    margin: 0px 0px 5px 10px;
+    padding: 5px 10px;
+    background-color: crimson;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+input#Back:active, input#Delete:active {
+    background-color: #A11531;
+}
+
+.select {
+    background-color: aquamarine;
+}
+
+.hide{
+    display: none;
+}
+
+.error {
+    color: red;
+    font-size: 16px;
+    margin: 5px;
+}
+

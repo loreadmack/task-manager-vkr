@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>GameOnTM</title>
+    <link rel="shortcut icon" href="../src/img/fav.jpg">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/header.css">
+    <link rel="stylesheet" href="../src/css/teamleadtaskcreator/body.css">
+    <script src="../src/js/dropmenu.js" defer></script>
+    <script src="../src/js/TaskCreator.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper-container">
+        <header class="header-container">
+            <div class="header__logo">
+                <img src="../src/img/logo.png" alt="Логотип">
+            </div>
+            <div class="header__burger-button">
+                <a href="#"><img src="../src/img/downdropico.svg" alt="Бургер"></a>
+            </div>
+        </header>
+        <main class="main-container">
+            <section class="main__burger">
+                <div class="main__burger-body">
+                    <div class="hidden" id="LeadID"><%=id%></div>
+                    <div class="main__burger-body__name"><span class="name">Name: </span> <span class="sname"><%=name%></span></div>
+                    <div class="main__burger-body__position"><span class="position">Position: </span> <span class="sposition"><%=role%></span></div>
+                    <div class="main__burger-body__logout_button"><a href="../logout" class="logout">Logout</a></div>
+                </div>
+            </section>
+            <section class="main__teamlead">
+                <div class="main__teamlead__body">
+                    <div class="wrapper__Task_Creator">
+                        <h1 class="title">Task constructor</h1>
+                        <form action="Task_Creator">
+                            <div class="main__temalead__body__header block">
+                                <label for="TaskHeader">Task<input type="text" id="TaskHeader" name="TaskHeader"></label>
+                                <label for="Importance">Importance<input type="text" name="Importance" list="Importance"></label>
+                                <datalist id="Importance">
+                                    <option value="Important">
+                                    <option value="Not important">
+                                </datalist>
+                                <label for="Urgency">Urgency<input type="text" name="Urgency" list="Urgency"></label>
+                                <datalist id="Urgency">
+                                    <option value="Urgently">
+                                    <option value="Not urgently">
+                                </datalist>
+                            </div>
+                            <div class="main_teamlead__body__context  block">
+                                <label for="TaskContext">TaskContext<textarea rows="5" cols="58" id="TaskContext"></textarea></label>
+                            </div>
+                            <div class="main_teamlead__body__employer_data  block">
+                                <label for="Employer">Choose an employer<input type="text" name="Employer" list="Employer"></label>
+                                <datalist id="Employer">
+                                    <option value="">
+                                </datalist>
+                                <label for="Date">Deadline<input type="date" id="Date" name="Date"></label>
+                                <input type="button" id="Submit" name="Submit" value="Submit">
+                            </div>
+                            <div class="main_teamlead__body__submit  block">
+
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

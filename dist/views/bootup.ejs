@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>GameOnTM</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/bootup/bootup.css">
+    <script src="src/js/bootup.js" defer></script>
+    <script src="src/js/bootup_slider.js" defer></script>
+</head>
+
+<body>
+<div class="wrapper">
+    <main>
+        <div class="main__welcome">
+            <img src="src/img/logo.png" alt="">
+            <h1>Welcome to GameOn TimeManagement</h1>
+            <p>This system is designed to improve the efficiency of the use of staff time.</p>
+            <p>The work of the system lies in the fact that the time for receiving tasks from the team leader to employees is reduced.</p>
+            <hr>
+            <p>If you see this message, it means that the system is installed correctly and is running</p>
+            <p>For further operation of the system, you need to create an administrator account, for this, click the button below.</p>
+            <input type="button" value="Continue" class="Continue">
+        </div>
+        <div class="main__create-admin-account hidden">
+            <img src="src/img/logo.png" alt="">
+            <h1>Admin account</h1>
+            <p>Administrator account is for adding and deleting other user accounts</p>
+            <hr>
+            <p>To create an administrator account, enter the account login and password below and click the create button</p>
+            <form action="main__create-admin">
+                <label for="login">Login</label><br>
+                <input type="text" id="login" name="login"><br>
+                <h5 class="incorrect hidden login">Login is empty</h5>
+                <label for="password">Password</label><br>
+                <input type="password" id="password" name="password"><br>
+                <h5 class="incorrect hidden password">Password is empty</h5>
+                <label for="rpassword">Repeat password</label><br>
+                <input type="password" id="rpassword" name="rpassword">
+                <h5 class="incorrect hidden rpassword">Password mismatch</h5>
+            </form>
+            <input type="button" value="Create" Class="Create">
+        </div>
+    </main>
+</div>
+</body></html>

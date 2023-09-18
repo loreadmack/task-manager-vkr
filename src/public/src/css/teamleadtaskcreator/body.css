@@ -1,0 +1,137 @@
+/*------------------------------------burger------------------------------------*/
+.main__burger {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main__burger-body {
+    border: 1px solid black;
+    border-radius: 10px 0 0 10px;
+    width: 200px;
+    height: 120px;
+    background-color: aliceblue;
+    box-shadow: -1px 1px 10px;
+    opacity: 0%;
+    transition: opacity 0.2s ease;
+}
+
+.open {
+    opacity: 100%;
+}
+
+.main__burger-body > div {
+    margin: 10px;
+}
+
+.name,
+.position {
+    font-weight: 700;
+}
+
+.main__burger-body__logout_button {
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: crimson;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s ease;
+}
+
+a.logout {
+    text-decoration: none;
+    color: black;
+}
+
+.main__burger-body__logout_button:active {
+    background-color: #A11531;
+}
+/*------------------------------------------------------------------------------*/
+/*------------------------------------body--------------------------------------*/
+
+
+
+div.wrapper-container {
+    height: 500px;
+    width: auto;
+}
+section.main__teamlead {
+    width: auto;
+    height: auto;
+}
+
+div.main__teamlead__body{
+    padding: 10px;
+    display: flex;
+    margin: auto;
+    width: 50vw;
+    height: auto;
+    border-radius: 10px;
+    background-color: #212529;
+}
+
+div.wrapper__Task_Creator{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+h1.title {
+    margin: 0 auto;
+    color:whitesmoke;
+}
+
+.block{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+div.block label, input, textarea{
+    display: block;
+}
+
+input[type='text'] {
+    padding: 3px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: none;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type='date'] {
+    padding: 2px 50px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.main__teamlead__body input[type='button'] {
+    padding: 0 50px;
+    border-radius: 5px;
+    background-color: crimson;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.main__teamlead__body input[type='button']:active {
+    background-color: #A11531;
+}
+
+div.block label{
+    color:aliceblue;
+}
+
+input#TaskContext {
+    width: 557px;
+    height: 250px;
+}
+
+.hidden {
+    display: none;
+}

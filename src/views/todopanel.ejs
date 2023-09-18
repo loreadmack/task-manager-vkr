@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>GameOnTM</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/todopanel/body.css">
+    <script src="src/js/dropmenu.js" defer></script>
+    <script src="src/js/taskSelect.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper-container">
+        <header class="header-container">
+            <div class="header__logo">
+                <img src="src/img/logo.png" alt="Логотип">
+            </div>
+            <div class="header__burger-button">
+                <a href="#"><img src="src/img/downdropico.svg" alt="Бургер"></a>
+            </div>
+        </header>
+        <main class="main-container">
+            <section class="main__burger">
+                <div class="main__burger-body">
+                    <div class="main__burger-body__name"><span class="name">Name: </span> <span class="sname"><%=name%></span></div>
+                    <div class="main__burger-body__position"><span class="position">Position: </span> <span class="sposition"><%=role%></span></div>
+                    <div class="main__burger-body__logout_button"><a href="/logout" class="logout">Logout</a></div>
+                </div>
+            </section>
+            <section class="main__todos">
+                <div class="main__todos-body">
+                    <div class="main__todos-body_list">
+                        <%if (task !== 'Not searched') {%>
+                        <%var CurDate =  new Date(task[0].deadline.toISOString()).toLocaleDateString(); var counter = 0%>
+                        <% for(let i = 0; i < task.length; i++) { %>
+                        <%if (new Date(task[i].deadline.toISOString()).toLocaleDateString() !== CurDate) {CurDate = new Date(task[i].deadline.toISOString()).toLocaleDateString(); counter = 0}%>
+                        <%if (counter === 0) { counter++%>
+                            <h2 class="title">Deadline: <%=CurDate %></h2><hr>
+                        <%} else {counter++}%>
+                        <div class="main__todos-body_todo-list">
+                            <div class="ID hidden"><%=task[i].id%></div>
+                            <p class="task">
+                                <alert class="<%if (task[i].priority === 1) {%> <%=red%> <% } else if (task[i].priority === 0.5) {%> <%=yellow%> <% } else { %> <%=green%> <% } %>">Task <%=i+1%>:</alert> <%=task[i].title%>
+                            </p>
+                        </div>
+                        <% }} else {%> <h2 class="title">Tasks not found</h2><%}%>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body></html>

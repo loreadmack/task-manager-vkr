@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>GameOnTM</title>
+    <link rel="shortcut icon" href="../src/img/fav.jpg">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/header.css">
+    <link rel="stylesheet" href="../src/css/apaneldelete/body.css">
+    <script src="../src/js/dropmenu.js" defer></script>
+    <script src="../src/js/accDelete.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper-container">
+        <header class="header-container">
+            <div class="header__logo">
+                <img src="../src/img/logo.png" alt="Логотип">
+            </div>
+            <div class="header__burger-button">
+                <a href="#"><img src="../src/img/downdropico.svg" alt="Бургер"></a>
+            </div>
+        </header>
+        <main class="main-container">
+            <section class="main__burger">
+                <div class="main__burger-body">
+                    <div class="main__burger-body__name"><span class="name">Name: </span> <span class="sname"><%=name%></span></div>
+                    <div class="main__burger-body__position"><span class="position">Position: </span> <span class="sposition"><%=role%></span></div>
+                    <div class="main__burger-body__logout_button"><a href="../logout" class="logout">Logout</a></div>
+                </div>
+            </section>
+            <section class="main__apanel">
+                <div class="wrapper__panel_block">
+                    <div class="DeletePanel">
+                        <div class="UserParams">
+                            <div class="Search_block">
+                                <input type="text" id="Search" placeholder="Enter userID, login, role, first or last name">
+                                <input type="button" id="SearchButton" value="Search">
+                            </div>
+                            <table class="Users">
+                                <tr>
+                                    <th>UserID</th>
+                                    <th>Role</th>
+                                    <th>Login</th>
+                                    <th>First name</th>
+                                    <th>Last name</th>
+                                </tr>
+                                <%for (let i=0; i<users.length; i++) {%>
+                                <tr class="UserData">
+                                    <td><%=users[i].id%></td>
+                                    <td><%=users[i].role%></td>
+                                    <td><%=users[i].login%></td>
+                                    <td><%=users[i].fname%></td>
+                                    <td><%=users[i].lname%></td>
+                                </tr>
+                                <%}%>
+                            </table>
+                        </div>
+                        <div class="NavPanel">
+                            <input type="button" class="Back" id="Back" value="Back">
+                            <input type="button" class="Back" id="Delete" value="Delete">
+                            <p class="error hide">User not selected</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>

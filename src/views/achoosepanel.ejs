@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>GameOnTM</title>
+    <link rel="shortcut icon" href="/src/img/fav.jpg">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/achoosepanel/body.css">
+    <script src="src/js/dropmenu.js" defer></script>
+    <script src="src/js/apanel.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapper-container">
+        <header class="header-container">
+            <div class="header__logo">
+                <img src="src/img/logo.png" alt="Логотип">
+            </div>
+            <div class="header__burger-button">
+                <a href="#"><img src="src/img/downdropico.svg" alt="Бургер"></a>
+            </div>
+        </header>
+        <main class="main-container">
+            <section class="main__burger">
+                <div class="main__burger-body">
+                    <div class="main__burger-body__name"><span class="name">Name: </span> <span class="sname"><%=name%></span></div>
+                    <div class="main__burger-body__position"><span class="position">Position: </span> <span class="sposition"><%=role%></span></div>
+                    <div class="main__burger-body__logout_button"><a href="../logout" class="logout">Logout</a></div>
+                </div>
+            </section>
+            <section class="main__admin">
+                <div class="main__admin_panel">
+                    <div class="main_admin_panel__block" id="Create_user">
+                        <h2 class="block_text">Create user</h2>
+                    </div>
+                    <div class="main_admin_panel__block" id="Delete_user">
+                        <h2 class="block_text">Delete user</h2>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

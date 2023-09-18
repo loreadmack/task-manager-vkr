@@ -1,0 +1,67 @@
+
+/*-------------------------auth_panel----------------------*/
+.main-container {
+    margin-top: 230px;
+}
+
+.main__auth {
+    display: flex;
+    justify-content: center;
+}
+
+.main__auth-panel {
+    width: 300px;
+    height: 270px;
+    border-radius: 10px;
+    background-color: #212529;
+    box-shadow: -3px 3px 10px;
+}
+
+.main__auth-panel h1 {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+form[action="main__auth-panel__form"] {
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+form[action="main__auth-panel__form"] input:not([type="button"]) {
+    width: 17rem;
+    height: 1.8rem;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding-left: 5px;
+}
+
+form[action="main__auth-panel__form"] input[type="button"] {
+    width: 10rem;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: crimson;
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+form[action="main__auth-panel__form"] input[type="button"]:active {
+    background-color: #A11531;
+}
+
+.incorrect {
+    border: 3px solid #A11531;
+    border-radius: 10px;
+}
+
+.error {
+    margin-top: 5px;
+    color: #A11531;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ------------------------------------------------------------ */
