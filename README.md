@@ -17,7 +17,7 @@
 5. DB_DATABASE= //Название базы данных
 6. SALT= //Соль (секретное слово для шифрования данных)
 
-#ENG
+# ENG
 This project was implemented as an application for final qualifying work. The following tools were used during development:
 1. TypeScrpit,
 2. Express
